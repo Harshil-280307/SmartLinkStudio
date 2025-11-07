@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Create Resume • SmartLink Studio</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+<header class="nav container">
+<h1 class="logo">SmartLink Studio</h1>
+<nav><a href="/">Home</a><a href="/explore.html">Explore</a></nav>
+</header>
+
+
+<main class="container builder">
+<h2>Create Your Resume</h2>
+
+
+<form id="resumeForm">
+<section class="step" data-step="1">
+<h3>Basic Info</h3>
+<label>Name<input name="name" required></label>
+<label>Email<input name="email" type="email"></label>
+<label>Headline<input name="headline"></label>
+</section>
+
+
+<section class="step" data-step="2" hidden>
+<h3>Experience</h3>
+<label>Company<input name="company"></label>
+<label>Role<input name="role"></label>
+<label>Duration<input name="duration"></label>
+<label>Description<textarea name="expDesc"></textarea></label>
+</section>
+
+
+<section class="step" data-step="3" hidden>
+<h3>Skills & Education</h3>
+<label>Skills (comma separated)<input name="skills"></label>
+<label>Education<textarea name="education" placeholder="Degree • College • Year"></textarea></label>
+</section>
+
+
+<div class="form-controls">
+<button type="button" id="prevBtn" hidden>Back</button>
+<button type="button" id="nextBtn">Next</button>
+<button type="button" id="generateBtn" hidden>Generate 6 Resumes (AI)</button>
+</div>
+</form>
+
+
+<div id="resultArea"></div>
+</main>
+
+
+<script src="/assets/js/resumeAI.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
